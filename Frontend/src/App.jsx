@@ -32,7 +32,7 @@ function App() {
   async function reviewCode() {
     try {
       const response = await axios.post(
-        "https://ai-code-reviewer.onrender.com/ai/get-review", // ✅ Correct URL
+        "https://ai-code-reviewier.onrender.com/ai/get-review", // ✅ Correct URL
         { code }
       );
 
