@@ -32,11 +32,10 @@ function App() {
   async function reviewCode() {
     try {
       const response = await axios.post(
-        "https://ai-code-reviewier.onrender.com/ai/get-review",
-        {
-          code,
-        }
+        "https://ai-code-reviewer.onrender.com/ai/get-review", // ✅ Correct URL
+        { code }
       );
+
       setReview(response.data);
     } catch (error) {
       console.error("Error getting review:", error);
