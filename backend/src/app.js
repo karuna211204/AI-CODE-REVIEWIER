@@ -5,7 +5,13 @@ const aiRoutes = require("./routes/ai.routes");
 const app = express();
 
 // Enable CORS
-app.use(cors()); // <--- Add this
+app.use(
+  cors({
+    origin: "*", // allow all origins (can restrict later if needed)
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // Middleware to parse JSON bodies
 app.use(express.json());
